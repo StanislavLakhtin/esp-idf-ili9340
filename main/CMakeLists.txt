@@ -1,4 +1,4 @@
-set(COMPONENT_SRCS "spiffs_example_main.c")
-set(COMPONENT_ADD_INCLUDEDIRS ".")
+idf_component_register( SRC_DIRS "."
+                        INCLUDE_DIRS ".")
 
-register_component()
+spiffs_create_partition_image(storage ../spiffs FLASH_IN_PROJECT)
